@@ -1,43 +1,50 @@
 // ************************* REQUIRED ******************************
 const pictures = [
-    { id:1,
-      title: "Голлум",
-      url: "https://avatarko.ru/img/kartinka/1/Gollum_Middle-earth.jpg"
-    },
-    { id:2,
-      title: "Фродо",
-      url: "https://v1.popcornnews.ru/k2/news/970/upload/HBebQ3.jpg"
-    },
-    { id:3,
-      title: "Арагорн",
-      url: "https://upload.wikimedia.org/wikipedia/ru/thumb/8/87/Ringstrilogyposter.jpg/274px-Ringstrilogyposter.jpg"
+    {
+        id: 1,
+        title: "Голлум",
+        url: "https://avatarko.ru/img/kartinka/1/Gollum_Middle-earth.jpg"
     },
     {
-        id:4,
-      title: "Гендольф",
-      url: "https://cs9.pikabu.ru/post_img/2018/02/25/9/1519570465127811508.jpg"
+        id: 2,
+        title: "Фродо",
+        url: "https://v1.popcornnews.ru/k2/news/970/upload/HBebQ3.jpg"
     },
-    { id:5,
-      title: "Хоббит",
-      url: "https://u.kanobu.ru/editor/images/66/28ed1902-8d07-4ad2-a4c7-4309b0fd3068.jpg"
+    {
+        id: 3,
+        title: "Арагорн",
+        url: "https://upload.wikimedia.org/wikipedia/ru/thumb/8/87/Ringstrilogyposter.jpg/274px-Ringstrilogyposter.jpg"
     },
-    { id:6,
-      title: "Леголас",
-      url: "https://gordonua.com/img/article/1907/96_tn.jpg"
+    {
+        id: 4,
+        title: "Гендольф",
+        url: "https://cs9.pikabu.ru/post_img/2018/02/25/9/1519570465127811508.jpg"
+    },
+    {
+        id: 5,
+        title: "Хоббит",
+        url: "https://u.kanobu.ru/editor/images/66/28ed1902-8d07-4ad2-a4c7-4309b0fd3068.jpg"
+    },
+    {
+        id: 6,
+        title: "Леголас",
+        url: "https://gordonua.com/img/article/1907/96_tn.jpg"
     }
-  ]
-readFile.onclick = (event)=>{
+]
+let result;
+readFile.onclick = (event) => {
     var request = new XMLHttpRequest
-request.open (
-    "POST",
-    './db.json'
-)
+    request.open(
+        "POST",
+        './db.json'
+    )
 
-request.onload = function() {
-   this.status === 200 ?
-      console.log ( this.response ) : null
-}
-request.send ()
+    request.onload = function (event) {
+        this.status === 200 ?
+            result = this.response) : null
+    }
+    request.send()
+
 }
 
 // ******************* ADDITIONAL #2 *******************************************
