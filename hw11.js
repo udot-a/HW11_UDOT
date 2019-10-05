@@ -40,7 +40,7 @@ readFile.onclick = (event) => {
     )
 
     request.onload = function (event) {
-        console.log('I am here...')
+        console.log(this.status)
         this.status === 200 ?
             result = this.response : result=null
     }
