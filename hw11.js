@@ -41,7 +41,7 @@ readFile.onclick = (event) => {
 
     request.onload = function (event) {
         this.status === 200 ?
-            result = this.response) : null
+            result = this.response : null
     }
     request.send()
 
