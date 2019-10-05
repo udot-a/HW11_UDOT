@@ -11,8 +11,11 @@
     flex-direction: column;
     width: 30%;
     align-items: center;
+    
 }
-
+#required{
+    overflow: auto;
+}
 h1 {
     align-self: center;
     font-size: 28px;
