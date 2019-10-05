@@ -1,39 +1,41 @@
 // ************************* REQUIRED ******************************
-const pictures = [
-    {
-        id: 1,
-        title: "Голлум",
-        src: "https://avatarko.ru/img/kartinka/1/Gollum_Middle-earth.jpg"
-    },
-    {
-        id: 2,
-        title: "Фродо",
-        src: "https://v1.popcornnews.ru/k2/news/970/upload/HBebQ3.jpg"
-    },
-    {
-        id: 3,
-        title: "Арагорн",
-        src: "https://upload.wikimedia.org/wikipedia/ru/thumb/8/87/Ringstrilogyposter.jpg/274px-Ringstrilogyposter.jpg"
-    },
-    {
-        id: 4,
-        title: "Гендольф",
-        src: "https://cs9.pikabu.ru/post_img/2018/02/25/9/1519570465127811508.jpg"
-    },
-    {
-        id: 5,
-        title: "Хоббит",
-        src: "https://u.kanobu.ru/editor/images/66/28ed1902-8d07-4ad2-a4c7-4309b0fd3068.jpg"
-    },
-    {
-        id: 6,
-        title: "Леголас",
-        src: "https://gordonua.com/img/article/1907/96_tn.jpg"
-    }
-]
+const obj = {
+   pictures: [
+        {
+            id: 1,
+            title: "Голлум",
+            src: "https://avatarko.ru/img/kartinka/1/Gollum_Middle-earth.jpg"
+        },
+        {
+            id: 2,
+            title: "Фродо",
+            src: "https://v1.popcornnews.ru/k2/news/970/upload/HBebQ3.jpg"
+        },
+        {
+            id: 3,
+            title: "Арагорн",
+            src: "https://upload.wikimedia.org/wikipedia/ru/thumb/8/87/Ringstrilogyposter.jpg/274px-Ringstrilogyposter.jpg"
+        },
+        {
+            id: 4,
+            title: "Гендольф",
+            src: "https://cs9.pikabu.ru/post_img/2018/02/25/9/1519570465127811508.jpg"
+        },
+        {
+            id: 5,
+            title: "Хоббит",
+            src: "https://u.kanobu.ru/editor/images/66/28ed1902-8d07-4ad2-a4c7-4309b0fd3068.jpg"
+        },
+        {
+            id: 6,
+            title: "Леголас",
+            src: "https://gordonua.com/img/article/1907/96_tn.jpg"
+        }
+    ]
+}
 function printImg(data) {
     elements = []
-    JSON.parse(data).forEach((item, index) => {
+    Object.values(JSON.parse(data))[0].forEach((item, index) => {
         elements.push(required.appendChild(document.createElement('img')))
         elements[index].style.width = '50px;'
         elements[index].src = item['src']
@@ -50,10 +52,9 @@ readFile.onclick = (event) => {
 
     request.onload = function (event) {
         this.status === 200 ?
-        printImg(response) : result = null
+            printImg(this.response) : result = null
     }
     request.send()
-
 }
 
 // ******************* ADDITIONAL #2 *******************************************
